@@ -120,7 +120,7 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: positions[idx].delay, duration: 0.8 }}
-                  className={`absolute glass px-5 py-3 rounded-2xl flex items-center gap-3 shadow-lg z-20 hidden md:flex`}
+                  className={`absolute glass px-3 py-2 md:px-5 md:py-3 rounded-xl md:rounded-2xl flex items-center gap-2 md:gap-3 shadow-lg z-20 scale-75 md:scale-100 origin-center`}
                   style={{ 
                     top: positions[idx].top, 
                     left: positions[idx].left, 
