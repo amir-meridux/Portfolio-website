@@ -8,8 +8,8 @@ const projects = [
     category: "Operational Systems for Healthcare & Service Businesses",
     description: "Meridux was established to help organisations improve administrative workflows through structured system design and practical AI implementation. Rather than replacing existing processes, the focus is on creating reliable operational systems that support people, reduce unnecessary manual work, and enable sustainable improvement.",
     outcomes: [
-      "Eliminated redundant manual data entry across administrative systems",
-      "Reduced operational bottlenecks to free up clinical and support staff"
+      "Designed to eliminate redundant manual data entry across administrative systems",
+      "Built to reduce operational bottlenecks and free up clinical and support staff"
     ],
     tags: ["Systems Architecture", "Workflow Design", "Healthcare Operations", "AI Implementation"],
     diagram: [
@@ -18,15 +18,17 @@ const projects = [
       "System Design",
       "Automation",
       "Operational Improvement"
-    ]
+    ],
+    learnMoreHref: "https://www.meridux.com",
+    learnMoreExternal: true
   },
   {
     title: "PatientCore",
     category: "Healthcare Workflow System",
     description: "PatientCore demonstrates how appointment management can be redesigned by analysing the complete workflow before introducing automation. The result is a structured operational process that improves consistency, reduces administrative effort, and supports better patient communication.",
     outcomes: [
-      "Standardised the patient intake pipeline for operational consistency",
-      "Significantly reduced administrative effort required for appointment confirmation"
+      "Standardises the patient intake pipeline for operational consistency",
+      "Automates intake and confirmation end-to-end to reduce manual administrative effort"
     ],
     tags: ["Workflow Analysis", "Administrative Processes", "Patient Journey", "Operational Reliability"],
     diagram: [
@@ -35,15 +37,18 @@ const projects = [
       "Workflow Engine",
       "Clinic Review",
       "Confirmation"
-    ]
+    ],
+    // Jumps directly to page 2 (Project One: PatientCore) rather than the PDF's cover page
+    learnMoreHref: "/Dr_Aamir_Farooq_Engineering_Portfolio_Extended.pdf#page=2",
+    learnMoreExternal: true
   },
   {
     title: "Prospect Intelligence Engine (PIE)",
-    category: "Operational Intelligence Platform",
-    description: "The Prospect Intelligence Engine was designed to automate business research while maintaining a structured decision-making process. By combining workflow automation with operational intelligence, it enables systematic prospect evaluation and supports more informed business development.",
+    category: "Operational Intelligence Platform (In Development)",
+    description: "The Prospect Intelligence Engine is being designed to automate business research while maintaining a structured decision-making process. By combining workflow automation with operational intelligence, it aims to enable systematic prospect evaluation and support more informed business development.",
     outcomes: [
-      "Automated structured data gathering for systematic prospect evaluation",
-      "Increased decision-making speed and accuracy for business development"
+      "Automates structured data gathering to support systematic prospect evaluation",
+      "Designed to increase decision-making speed for business development"
     ],
     tags: ["Operational Intelligence", "Data Workflows", "Research Automation", "Decision Support"],
     diagram: [
@@ -52,7 +57,10 @@ const projects = [
       "Scoring",
       "Qualification",
       "Outreach"
-    ]
+    ],
+    // Jumps directly to page 4 (Project Two: PIE)
+    learnMoreHref: "/Dr_Aamir_Farooq_Engineering_Portfolio_Extended.pdf#page=4",
+    learnMoreExternal: true
   },
   {
     title: "Research & Innovation",
@@ -68,7 +76,10 @@ const projects = [
       "Systems Thinking",
       "Workflow Design",
       "Business Operations"
-    ]
+    ],
+    // TODO: paste your Google Scholar profile URL here (same one used in Research.jsx)
+    learnMoreHref: "https://scholar.google.com.my/citations?user=944ci2EAAAAJ&hl=en",
+    learnMoreExternal: true
   }
 ];
 
@@ -93,7 +104,8 @@ const SelectedProjects = () => {
               Projects.
             </span>
           </h2>
-          <p className="text-xl text-slate-600">Examples of applying systems thinking to operational challenges.</p>
+          <p className="text-xl text-slate-600 mb-3">Examples of applying systems thinking to operational challenges.</p>
+          <p className="text-sm text-slate-400 italic">Independent builds and product demos, not client-attributed case studies.</p>
         </motion.div>
 
         {/* Project Cards */}
@@ -131,12 +143,17 @@ const SelectedProjects = () => {
                   ))}
                 </div>
 
-                <button className="inline-flex items-center gap-2 text-blue font-semibold hover:gap-3 transition-all">
+                <a
+                  href={project.learnMoreHref}
+                  target={project.learnMoreExternal ? "_blank" : undefined}
+                  rel={project.learnMoreExternal ? "noopener noreferrer" : undefined}
+                  className="inline-flex items-center gap-2 text-blue font-semibold hover:gap-3 transition-all"
+                >
                   Learn More <ArrowRight size={18} />
-                </button>
+                </a>
               </div>
 
-              {/* Visual System Diagram Side: Option 1 + Option A Applied */}
+              {/* Visual System Diagram Side */}
               <div className="w-full lg:w-1/2 min-h-[400px] glass-card flex items-center justify-center p-8 relative border-blue/10">
                 <div className="flex flex-col gap-2 items-center w-full">
                   {project.diagram.map((step, stepIdx) => (

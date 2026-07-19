@@ -35,7 +35,9 @@ const contactCards = [
     title: "Resume",
     description: "Download my latest professional résumé, including experience, research, and selected projects.",
     buttonText: "Download Resume",
-    href: "/Dr_Aamir_Farooq_AI_Automation_Engineer_Resume.pdf",
+    // NOTE: this file must live in /public for the link to work after `npm run build`.
+    // See accompanying message for why.
+    href: "/Dr_Aamir_Farooq_Systems_Architect_Resume.pdf",
     download: true,
     color: "text-orange",
     bgColor: "bg-orange/10"
@@ -113,7 +115,6 @@ const Contact = () => {
             </div>
             
             <div className="shrink-0">
-              {/* Since no specific scheduling link was provided, this opens an email pre-filled with a relevant subject line */}
               <a 
                 href="mailto:aamir@meridux.com?subject=Schedule%20an%20Operational%20Discovery%20Call"
                 className="inline-flex items-center justify-center gap-2 text-base font-semibold text-white bg-blue px-8 py-4 rounded-xl shadow-lg shadow-blue/20 hover:bg-blue/90 hover:shadow-xl transition-all"
@@ -142,7 +143,6 @@ const Contact = () => {
                   </p>
                   
                   <div>
-                    {/* Conditionally adding the download attribute if it's the resume card */}
                     <a 
                       href={card.href}
                       target="_blank"

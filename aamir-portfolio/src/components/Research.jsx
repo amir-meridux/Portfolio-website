@@ -14,7 +14,7 @@ const researchCards = [
     description: "Research outcomes include peer-reviewed journal publications and conference papers covering sensing technologies, system modelling, and engineering design.",
     button: {
       label: "View Publications",
-      href: "#" // Placeholder for Google Scholar link
+      href: "https://scholar.google.com.my/citations?user=944ci2EAAAAJ&hl=en" // Placeholder for Google Scholar link
     }
   },
   {

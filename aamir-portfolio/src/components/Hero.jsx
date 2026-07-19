@@ -1,7 +1,8 @@
-﻿import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Box, Layers, Activity, Settings } from 'lucide-react';
 import { heroContent } from '../data/content';
+import headshotImg from '../images/LinkedIn_Headshot_AI.png';
 
 const icons = [Settings, Layers, Box, Activity];
 
@@ -28,20 +29,20 @@ const Hero = () => {
                 {heroContent.tagline}
               </motion.div>
               
-              {/* Two-Color Name (Replaces original text block) */}
+              {/* Two-Color Name */}
               <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight mb-4">
-  <span className="text-primary">Aamir </span>
-  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-400">
-    Farooq, PhD
-  </span>
-</h1>
+                <span className="text-primary">Aamir </span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-400">
+                  Farooq, PhD
+                </span>
+              </h1>
 
-              {/* Title (Kept dynamic from your content file) */}
+              {/* Title */}
               <h3 className="text-xl font-semibold text-slate-500 uppercase tracking-widest mb-8">
                 {heroContent.identity.title}
               </h3>
 
-              {/* Two-Color, Two-Line Heading (Replaces original text block) */}
+              {/* Two-Color, Two-Line Heading */}
               <h2 className="text-4xl lg:text-5xl font-extrabold text-primary leading-tight mb-6">
                 Designing Intelligent <br className="hidden lg:block" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-400">
@@ -86,22 +87,22 @@ const Hero = () => {
             />
 
             {/* Main Portrait Container */}
-<motion.div
-  initial={{ opacity: 0, scale: 0.9 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 0.8, delay: 0.3 }}
-  className="relative w-full max-w-md aspect-[4/5] glass-card overflow-hidden flex items-center justify-center border-white/60"
->
-  {/* The Image: Using object-cover ensures it fills the container */}
-  <img 
-    src="./src/images/LinkedIn_Headshot_AI.png" 
-    alt="Aamir Farooq, PhD"
-    className="w-full h-full object-cover"
-  />
-  
-  {/* The Overlay (keep this for the glass aesthetic) */}
-  <div className="absolute inset-0 bg-gradient-to-br from-slate-100/50 to-slate-50/20 mix-blend-overlay"></div>
-</motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="relative w-full max-w-md aspect-[4/5] glass-card overflow-hidden flex items-center justify-center border-white/60"
+            >
+              {/* Imported as a module so it survives the production build (see Vite note) */}
+              <img 
+                src={headshotImg} 
+                alt="Aamir Farooq, PhD"
+                className="w-full h-full object-cover"
+              />
+              
+              {/* The Overlay (keep this for the glass aesthetic) */}
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-100/50 to-slate-50/20 mix-blend-overlay"></div>
+            </motion.div>
 
             {/* Floating Credibility Cards */}
             {heroContent.floatingCards.map((card, idx) => {

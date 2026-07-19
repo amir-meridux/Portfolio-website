@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Network, Target, Box } from 'lucide-react';
 
@@ -137,9 +137,7 @@ const HowIThink = () => {
                       viewport={{ once: true }}
                       transition={{ delay: 0.1 * i }}
                       whileHover={{ scale: 1.02, borderColor: "#3b82f6" }}
-                      // Replace your existing motion.div className with this:
-
-className="px-6 py-4 bg-blue-50/50 backdrop-blur-sm border border-blue-100/50 shadow-sm font-semibold text-primary w-full max-w-xs text-center transition-all duration-300 cursor-default"
+                      className="px-6 py-4 bg-blue-50/50 backdrop-blur-sm border border-blue-100/50 shadow-sm rounded-xl font-semibold text-primary w-full max-w-xs text-center transition-all duration-300 cursor-default"
                     >
                       {step}
                     </motion.div>
