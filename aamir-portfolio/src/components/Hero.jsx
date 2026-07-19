@@ -109,9 +109,9 @@ const Hero = () => {
               const Icon = icons[idx % icons.length];
               const positions = [
                 { top: '10%', left: '-10%', delay: 0.5 },
-                { top: '25%', right: '-5%', delay: 0.7 },
+                { top: '45%', right: '-5%', delay: 0.7 },
                 { bottom: '25%', left: '-5%', delay: 0.9 },
-                { bottom: '10%', right: '-10%', delay: 1.1 },
+                { bottom: '10%', right: '5%', delay: 1.1 },
               ];
 
               return (
